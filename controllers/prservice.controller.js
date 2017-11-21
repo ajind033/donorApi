@@ -10,7 +10,7 @@ exports.create = (req,res) =>{
             DOB : req.body.DOB
         });
         entry.save()
-        .then(() => res.send('Success saving Customer '))
+        .then(() => res.send(JSON.stringify(cust)))
         .catch((err) => res.send(err));
     };
 
